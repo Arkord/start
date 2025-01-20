@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card list</title>
+</head>
+<body>
+    <h1>This is my car list!</h1>
+    <!-- <ul>
+        <li>Car number 1</li>
+        <li>Car number 2</li>
+        <li>Car number 3</li>
+        <li>Car number 4</li>
+        <li>Car number 5</li>
+    </ul> -->
+
+   <ul>
+        
+        {% for car in list  %}
+            <li>{{car.brand}} - {{car.year}} - {{car.paint}}</li>
+        {% endfor %}
+            
+   </ul>
+
+        
+
+</body>
+</html>
