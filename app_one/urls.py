@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.http import HttpRequest, HttpResponse
 from django.urls import path
-from app_one.views import car_view, author_view
+from app_one.views import car_view, author_view, my_view, CarListView
 
 # def my_view(request):
 #     return ''
@@ -35,7 +35,8 @@ from app_one.views import car_view, author_view
 # ]
 
 urlpatterns = [
-    path('list/', car_view),
+    # path('list/', my_view),
+    path('list/', CarListView.as_view()),
     path('detail/<int:id>', car_view),
     path('brands/<str:brand>', car_view),
     path('authors/', author_view),
